@@ -1,0 +1,26 @@
+{
+  "name": "today-eat",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/dev.mjs",
+    "build": "vite build && node scripts/package.mjs",
+    "start": "node server/dev.mjs --production",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "motion": "^12.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1",
+    "vite": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

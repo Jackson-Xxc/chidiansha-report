@@ -1,0 +1,79 @@
+/* The first viewport is for deciding; the list continues naturally below it. */
+.decision-break{display:none}
+.landing-view .decision-workspace{min-height:calc(100svh - 98px);margin:0;grid-template-rows:auto auto auto minmax(320px,1fr) auto auto}
+.landing-view .quick-filters{grid-row:2}
+.landing-view .discovery-filters{grid-row:3}
+.landing-view .chooser{grid-row:4;grid-template-columns:1fr;grid-template-rows:auto auto auto;align-content:center;justify-items:center;gap:24px;padding:38px 0 48px;text-align:center}
+.landing-view .chooser-title{grid-column:1;grid-row:1}
+.landing-view .decision-kicker{font-size:12px;letter-spacing:2px;margin-bottom:22px}
+.landing-view .chooser h1{font-size:clamp(48px,6vw,80px);font-weight:750;line-height:1.17;letter-spacing:-3px}
+.landing-view .chooser h1>span{display:inline-block;color:var(--orange);font-weight:500;transform:rotate(9deg);margin-left:4px}
+.landing-view .chooser .decision-count{grid-column:1;grid-row:2;justify-content:center;font-size:13px;gap:8px;color:#918574}
+.landing-view .decision-count strong{font-size:28px;color:#b66a45;font-weight:550}
+.landing-view .chooser-right{grid-column:1;grid-row:3;width:min(100%,320px);margin:4px 0 0}
+.landing-view .dark-button{width:100%;min-height:58px;border-radius:16px;padding:16px 23px;font-size:16px;box-shadow:0 8px 24px #da56251a;transition:background .2s,transform .2s,box-shadow .2s}
+.landing-view .dark-button:active{transform:scale(.98)}
+.landing-view .dark-button>span{text-align:center}
+.landing-view .dark-button>svg:last-child{display:block}
+.landing-view .pool-tools{grid-row:5;width:100%;padding:4px 0;border-top:1px solid #e8e1d6}
+.landing-view .meal-more{grid-column:1/-1;grid-row:6;width:100%;max-width:none;margin:0;padding:4px 0 8px;justify-content:space-between;border-top:0}
+.landing-view .meal-more button{font-size:11px}
+.scroll-to-list{grid-column:1/-1;grid-row:6;display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:12px 0 20px;color:#a28f77;font-size:11px;letter-spacing:1px}
+.scroll-to-list svg{transition:transform .2s}
+.scroll-to-list:hover svg{transform:translateY(3px)}
+.landing-view .discovery{padding-top:38px;border-top:1px solid #e6dfd3;scroll-margin-top:18px}
+.browse-heading>span{font-size:11px;letter-spacing:1px;color:#a18d73}
+.browse-heading h2{font-size:27px;font-weight:650;letter-spacing:-.7px;margin:10px 0 0}
+.landing-view .results-heading{margin-top:18px;margin-bottom:22px}
+.landing-view .bottom-banner{display:none}
+.saved-view .meal-more{display:none}
+@media(min-width:761px){
+ .landing-view .decision-workspace{max-width:1040px;margin:0 auto}
+ .landing-view .pool-tools,.landing-view .meal-more{max-width:620px;justify-self:center}
+ .landing-view .chooser{padding:44px 0 54px}
+}
+@media(max-width:760px){
+ .landing-view .header{height:66px}
+ .landing-view .decision-workspace{min-height:calc(100svh - 132px - env(safe-area-inset-bottom));grid-template-rows:auto auto auto minmax(290px,1fr) auto auto}
+ .landing-view .chooser{gap:20px;padding:30px 0 38px}
+ .landing-view .decision-break{display:block}
+ .landing-view .decision-kicker{font-size:10px;letter-spacing:1.8px;margin-bottom:20px}
+ .landing-view .chooser h1{font-size:clamp(43px,12.5vw,66px);line-height:1.2;letter-spacing:-2px}
+ .landing-view .chooser .decision-count{font-size:12px}
+ .landing-view .decision-count strong{font-size:27px}
+ .landing-view .chooser-right{width:min(100%,290px);margin-top:5px}
+ .landing-view .dark-button{min-height:56px;font-size:15px;padding:15px 21px;border-radius:15px}
+ .landing-view .pool-status{min-height:32px;font-size:10px}
+ .landing-view .meal-more{flex-direction:row;align-items:center;gap:12px;padding:0}
+ .landing-view .meal-more button{font-size:10px;gap:5px}
+ .scroll-to-list{min-height:57px;padding:14px 0 17px;font-size:10px;gap:8px}
+ .landing-view .discovery{padding-top:30px}
+ .browse-heading h2{font-size:24px}
+ .landing-view footer .brand{display:none}
+ .landing-view footer{justify-content:space-between}
+}
+@media(max-width:360px),(max-height:680px) and (max-width:760px){
+ .landing-view .decision-workspace{grid-template-rows:auto auto auto minmax(250px,1fr) auto auto}
+ .landing-view .chooser{padding:18px 0 22px;gap:13px}
+ .landing-view .chooser h1{font-size:40px;line-height:1.15}
+ .landing-view .decision-kicker{margin-bottom:12px;font-size:9px}
+ .landing-view .decision-count strong{font-size:23px}
+ .landing-view .chooser-right{width:260px;max-width:100%;margin:0}
+ .landing-view .dark-button{min-height:49px;padding:12px 19px;font-size:14px}
+ .landing-view .meal-more button{font-size:9px}
+ .scroll-to-list{min-height:45px;padding:9px 0 12px}
+}
+@media(max-height:620px) and (max-width:760px){
+ .landing-view .decision-workspace{grid-template-rows:auto auto auto minmax(210px,1fr) auto auto}
+ .landing-view .quick-filters{padding-top:6px;padding-bottom:4px}
+ .landing-view .chooser{padding:10px 0 14px;gap:10px}
+ .landing-view .chooser h1{font-size:34px}
+ .landing-view .decision-kicker{margin-bottom:7px}
+ .landing-view .decision-count strong{font-size:20px}
+ .landing-view .dark-button{min-height:46px;padding-top:10px;padding-bottom:10px}
+ .scroll-to-list{min-height:40px;padding:8px 0 10px}
+}
+@media(prefers-reduced-motion:reduce){.scroll-to-list svg,.landing-view .dark-button{transition:none}}
+
+.nearby-label{grid-column:1;grid-row:1;display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px;font-weight:600;color:var(--text)}
+.location-empty>p{max-width:520px;line-height:1.8;margin:0 auto 20px}.location-empty .light-button{margin:4px}

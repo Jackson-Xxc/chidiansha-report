@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env*
+!.env.example
+.edgeone/
+qa/
+backups/
+*.log
+.DS_Store
+Thumbs.db

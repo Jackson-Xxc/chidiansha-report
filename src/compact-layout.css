@@ -1,0 +1,75 @@
+/* A compact, typographic decision area with no hero image or enclosing card. */
+.decision-workspace {
+  display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:20px;
+  margin:28px 0 0;padding:0;border:0;border-radius:0;background:none;
+  box-shadow:none;overflow:visible;
+}
+.decision-controls{display:contents}
+.decision-controls .mode-tabs{grid-column:1;grid-row:1;justify-self:start}
+.decision-controls .preferences-button{grid-column:2;grid-row:1;justify-self:end}
+.quick-filters{grid-column:1/-1;margin:0;padding:12px 0;border-top:1px solid #e9e2d7}
+.decision-workspace .discovery-filters{grid-column:1/-1}
+.decision-workspace .chooser {
+  grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) auto;
+  grid-template-rows:auto auto;column-gap:32px;row-gap:14px;
+  padding:26px 0 30px;margin:0;min-height:0;overflow:visible;
+  border:0;border-radius:0;background:none;align-items:center;
+}
+.decision-workspace .chooser-title{grid-column:1;grid-row:1;display:block;min-width:0}
+.decision-kicker{font-size:11px;letter-spacing:1.2px;color:#978a78;margin-bottom:10px}
+.decision-workspace .chooser h1{font-size:38px;line-height:1.25;letter-spacing:-1.2px;font-weight:750;color:#342c25;margin:0}
+.decision-workspace .chooser h1>span{color:var(--orange);font-weight:500}
+.decision-workspace .chooser .decision-count{grid-column:1;grid-row:2;display:flex;align-items:baseline;gap:7px;margin:0;color:#92836f;font-size:13px;line-height:1.6;white-space:normal;max-width:none}
+.decision-count strong{font-size:22px;font-weight:650;letter-spacing:-.5px;color:#5d5141;font-variant-numeric:tabular-nums}
+.decision-workspace .chooser-right{grid-column:2;grid-row:1/3;display:block;width:auto;margin:0;align-self:center}
+.decision-workspace .dark-button{min-height:50px;padding:13px 20px;font-size:14px;gap:10px;border-radius:11px;box-shadow:none;width:auto;white-space:nowrap}
+.decision-workspace .dark-button>span{flex:1;text-align:left}
+.decision-workspace .pool-tools{grid-column:1/-1;gap:12px;padding:5px 0;margin:0;border-top:1px solid #e9e2d7}
+.pool-status{font-size:11px;line-height:1.5;white-space:normal;min-height:36px}
+.decision-workspace .pool-tools .browse-toggle{width:auto;order:4;min-height:40px;padding:8px 0;margin-left:auto;font-size:11px}
+.meal-more{margin:8px 0 24px;padding:10px 0 12px;border-top:1px solid #e9e2d7;gap:20px}
+.meal-more button{font-size:12px;color:#91826e}
+.discovery{padding-top:20px}
+.focus-mode footer{margin-top:0;border-top:0}
+.saved-view .decision-workspace .chooser{padding-top:18px}
+.saved-view .decision-kicker{display:none}
+.saved-view .decision-workspace .chooser h1{font-size:28px}
+@media(min-width:761px){
+ .decision-workspace{margin-top:26px}
+ .decision-workspace .chooser{padding-top:30px;padding-bottom:34px}
+ .decision-workspace .dark-button{min-width:184px}
+ .meal-more{justify-content:flex-start;gap:32px}
+}
+@media(max-width:760px){
+ main{padding:0 20px}.header{height:66px}
+ .decision-workspace{margin-top:0;padding:0;column-gap:12px}
+ .decision-controls .mode-tabs{gap:24px}.decision-controls .mode-tabs button{min-height:44px;padding-bottom:10px}
+ .decision-controls .preferences-button{width:32px}
+ .quick-filters{padding:10px 0 8px;gap:8px}.delivery-context{font-size:10px;max-width:145px}
+ .quick-filters .compact-filter-toggle{background:#f0ece4;min-height:34px;padding:6px 9px}
+ .decision-workspace .chooser{grid-template-columns:minmax(0,1fr) auto;column-gap:14px;row-gap:22px;padding:22px 0 25px}
+ .decision-workspace .chooser-title{grid-column:1/-1;grid-row:1;padding:0}
+ .decision-kicker{font-size:10px;letter-spacing:1px;margin-bottom:9px}
+ .decision-workspace .chooser h1{font-size:29px;line-height:1.3;letter-spacing:-.9px}
+ .decision-workspace .chooser .decision-count{grid-column:1;grid-row:2;font-size:11px;gap:5px}
+ .decision-count strong{font-size:23px}
+ .decision-workspace .chooser-right{grid-column:2;grid-row:2;align-self:center;margin:0;width:auto}
+ .decision-workspace .dark-button{min-height:46px;padding:11px 14px;font-size:13px;gap:8px;border-radius:10px;width:auto}
+ .decision-workspace .dark-button>svg:last-child{display:none}
+ .decision-workspace .pool-tools{gap:6px;padding:3px 0}
+ .pool-status{font-size:10px;min-height:38px;line-height:1.5}
+ .decision-workspace .pool-tools .browse-toggle{font-size:10px;min-height:40px;padding:8px 0}
+ .meal-more{margin:5px 0 18px;padding:10px 0 12px;flex-direction:row;align-items:center;gap:12px}
+ .meal-more button{font-size:10px;gap:5px;line-height:1.6}.meal-more button:last-child{flex-shrink:0}
+ .focus-mode footer{height:42px;margin-top:0}
+ .saved-view .decision-workspace .chooser h1{font-size:26px}
+}
+@media(max-width:360px){
+ main{padding:0 16px}.header{height:60px}
+ .decision-workspace .chooser{column-gap:10px;row-gap:20px;padding:20px 0 23px}
+ .decision-workspace .chooser h1{font-size:26px}
+ .decision-workspace .dark-button{padding:11px 12px;font-size:12px}
+ .decision-workspace .chooser .decision-count{font-size:10px}.decision-count strong{font-size:21px}
+ .pool-status,.decision-workspace .pool-tools .browse-toggle{font-size:9px}
+ .meal-more{gap:8px}.meal-more button{font-size:9px}
+}

@@ -1,0 +1,46 @@
+/* Food decisions stay primary; platform links are quiet, optional actions. */
+.delivery-context{font-size:12px;color:var(--muted,#827d72);margin-left:auto}
+.delivery-label{color:#8c8173;font-size:11px}
+.delivery-explainer{font-size:13px;line-height:1.7;color:#7e776e}
+.food-image-button.shop-logo{background:#f4f0e9;padding:30px}
+.food-image-button.shop-logo img{object-fit:contain;border-radius:18px;max-height:100%;filter:none}
+.result-image.shop-logo{background:#f4f0e9;padding:28px;display:flex;justify-content:center}
+.result-image.shop-logo img{object-fit:contain;width:100%;height:100%;max-width:240px;border-radius:18px}
+.meal-more{max-width:1240px;margin:12px auto 38px;padding:18px 0;border-top:1px solid #e6dfd5;display:flex;justify-content:space-between;gap:20px}
+.meal-more button{display:flex;align-items:center;gap:9px;border:0;background:none;color:#746b60;font-size:13px;cursor:pointer;padding:8px 0;text-align:left}
+.meal-more button:hover{color:#c95732}
+.platform-tabs{display:flex;gap:8px;margin:20px 0}
+.platform-tabs button{background:#f5f0e8;color:#766c61;border:1px solid transparent;padding:10px 18px;border-radius:100px;cursor:pointer;font:inherit;font-size:13px}
+.platform-tabs button.active{border-color:#c9b7a0;background:#eee6d9;color:#342e26}
+.platform-list{display:grid;gap:10px}
+.platform-list>button{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;background:transparent;border:1px solid #e4ddd2;border-radius:16px;text-align:left;cursor:pointer;color:inherit}
+.platform-list>button:hover,.platform-list>button.active{background:#f5f0e8;border-color:#c9b7a0}
+.platform-list strong{display:block;font-size:16px;font-weight:600}
+.platform-list small{display:block;font-size:12px;color:#82786c;line-height:1.6;margin-top:5px}
+.platform-status{display:flex;gap:10px;align-items:center;color:#82786c;font-size:13px;margin:20px 0}
+.platform-ready{margin:20px 0}
+.platform-ready a{display:flex;text-decoration:none;justify-content:center}
+.qr-details{margin:18px 0;color:#82786c;font-size:12px}
+.qr-details summary{cursor:pointer;padding:10px 0}
+.platform-qr{display:block;width:170px;height:170px;object-fit:contain;margin:10px auto;background:white}
+.location-alternative{border-top:1px solid #e6dfd5;margin-top:25px;padding-top:10px}
+.location-alternative p{font-size:14px;color:#82786c}
+.about-copy>.light-button{margin:8px 8px 0 0}
+/* Merchant thumbnails use the complete square area, including on mobile. */
+.food-card.delivery-card .food-image-button{aspect-ratio:1 / 1;padding:0}
+.food-card.delivery-card .food-image-button img{border-radius:0;object-fit:contain;transform:none;filter:none}
+.food-card.delivery-card .food-body{padding:14px 14px 16px}
+.food-card.delivery-card .food-name{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;white-space:normal;overflow:hidden;text-overflow:ellipsis;overflow-wrap:anywhere;line-height:1.5;min-height:3em;font-size:16px}
+.food-card.delivery-card .food-body>p,.food-card.delivery-card .delivery-label{display:none}
+.food-card.delivery-card .food-kicker{margin-bottom:6px;font-size:11px}
+.food-card.delivery-card .food-kicker>span:last-child{display:none}
+.food-card.delivery-card .food-meta{border-top:0;margin-top:10px;padding-top:0;gap:4px 10px;font-size:11px;line-height:1.6}
+@media(max-width:760px){
+ .food-card.delivery-card{border-radius:14px}
+ .food-card.delivery-card .food-body{padding:12px}
+ .food-card.delivery-card .food-name{font-size:14px}
+ .food-card.delivery-card .food-kicker{font-size:10px}
+ .food-card.delivery-card .food-meta,.food-card.delivery-card .food-meta>span:first-child{font-size:10px}
+}
+@media(max-width:360px){.food-card.delivery-card .food-body{padding:10px}.food-card.delivery-card .food-name{font-size:13px}.food-card.delivery-card .food-meta{gap:3px 7px;font-size:9px}.food-card.delivery-card .food-meta>span:first-child{font-size:9px}}
+@media(max-width:760px){.meal-more{margin:8px 0 24px;flex-direction:column;gap:2px;padding:12px 0}.meal-more button{font-size:12px}.delivery-context{font-size:10px;max-width:145px;text-align:right}.results-heading{align-items:flex-start;gap:8px}.results-heading>span{font-size:10px;max-width:100px;text-align:right}.food-image-button.shop-logo{padding:20px}.result-image.shop-logo{padding:16px}.result-image.shop-logo img{max-width:160px}.platform-list>button{padding:15px}}
